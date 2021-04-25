@@ -159,6 +159,7 @@ Voltar para home
                      name="name"
                      id="name"
                      onChange={handleInputChange}
+                     required
                      />
                  </div>
 
@@ -172,6 +173,7 @@ Voltar para home
                      name="email"
                      id="email"
                      onChange={handleInputChange}
+                     required
                      />
                  </div>
                  <div className="field">
@@ -183,6 +185,7 @@ Voltar para home
                      name="whatsapp"
                      id="whatsapp"
                      onChange={handleInputChange}
+                     required
                      />
                  </div>
                  
@@ -202,6 +205,7 @@ Voltar para home
 
         <Marker 
         position={selectedPosition}
+        
         />
        </Map>
 
@@ -209,7 +213,7 @@ Voltar para home
                  <div className="field-group">
                      <div className="field">
                          <label htmlFor="uf">Estado (UF)</label>
-                        <select name="uf" id="uf" value={selectedUF} onChange={handleSelectUf}>
+                        <select name="uf" id="uf" value={selectedUF} onChange={handleSelectUf} required>
                             <option value="0"> Selecione uma UF</option>
                             {ufs.map(uf =>(
                                 <option key={uf} value={uf}> {uf}</option>
@@ -218,7 +222,7 @@ Voltar para home
                      </div>
                      <div className="field">
                          <label htmlFor="city">Cidade</label>
-                        <select name="city" id="city" value={selectedCity} onChange={handleSelectCity}>
+                        <select name="city" id="city" value={selectedCity} onChange={handleSelectCity} >
                             <option value="0"> Selecione uma Cidade</option>
                             {cities.map(city =>(
                                 <option key={city} value={city}> {city}</option>
